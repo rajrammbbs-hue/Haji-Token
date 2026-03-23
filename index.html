@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAJI Token</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: white;
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+    }
+    .card {
+      max-width: 720px;
+      margin: auto;
+      background: #141b34;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    img {
+      max-width: 260px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .mint {
+      word-break: break-all;
+      background: #0f1530;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+    button {
+      margin-top: 14px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .meta {
+      text-align: left;
+      margin-top: 24px;
+      line-height: 1.8;
+    }
+    a {
+      color: #9fd3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/rajrammbbs-hue/Haji-Token/main/HAJI.logo.png" alt="HAJI Logo">
+    <h1>HAJI</h1>
+    <p>HAJI is a Solana fungible token.</p>
+
+    <div class="meta">
+      <div><strong>Symbol:</strong> HAJI</div>
+      <div><strong>Network:</strong> Solana</div>
+      <div><strong>Total Supply:</strong> 10,000,000,000</div>
+      <div><strong>Mint Address:</strong></div>
+      <div class="mint" id="mint">GcppTug5rfxxNiTBxdoEA9rZkgpRN3nrHdmVzvUXVhNy</div>
+      <button onclick="copyMint()">Copy Mint Address</button>
+      <div style="margin-top:20px;">
+        <a href="https://github.com/rajrammbbs-hue/Haji-Token" target="_blank">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyMint() {
+      const mint = document.getElementById("mint").innerText;
+      navigator.clipboard.writeText(mint);
+      alert("Mint address copied");
+    }
+  </script>
+</body>
+</html>
